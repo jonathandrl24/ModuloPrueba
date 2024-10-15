@@ -20,7 +20,7 @@ public class ClienteDAO {
     // Definir un logger para registrar errores y eventos
     private static final Logger logger = Logger.getLogger(ClienteDAO.class.getName());
 
-    // Método para insertar un cliente en la base de datos
+    // 1. Método para insertar un cliente en la base de datos
     public void insertCliente(Cliente cliente) {
         // Consulta SQL para insertar un cliente
         String sql = "INSERT INTO cliente (nombre, direccion, telefono, correo_electronico, contrasena) VALUES (?, ?, ?, ?, ?)";
@@ -46,12 +46,12 @@ public class ClienteDAO {
             System.out.println("Cliente insertado correctamente");
         
         } catch (SQLException e) {
-            // Registrar el error con el logger en lugar de usar printStackTrace()
+            // Registrar el error con el logger 
             logger.log(Level.SEVERE, "Error al insertar cliente", e);
         }
     }
     
-    // Método para actualizar un cliente en la base de datos
+    // 2. Método para actualizar un cliente en la base de datos
     public void actualizarCliente(Cliente cliente) {
         // Consulta SQL para actualizar los datos de un cliente
         String sql = "UPDATE cliente SET nombre = ?, direccion = ?, telefono = ?, correo_electronico = ?, contrasena = ? WHERE id_cliente = ?";
@@ -77,12 +77,12 @@ public class ClienteDAO {
             }
 
         } catch (SQLException e) {
-            // Registrar el error con el logger en lugar de usar printStackTrace()
+            // Registrar el error con el logger 
             logger.log(Level.SEVERE, "Error al actualizar cliente", e);
         }
     }
     
-    // Método para eliminar un cliente de la base de datos
+    // 3. Método para eliminar un cliente de la base de datos
     public void eliminarCliente(int idCliente) {
         // Consulta SQL para eliminar un cliente según su ID
         String sql = "DELETE FROM cliente WHERE id_cliente = ?";
@@ -103,12 +103,12 @@ public class ClienteDAO {
             }
 
         } catch (SQLException e) {
-            // Registrar el error con el logger en lugar de usar printStackTrace()
+            // Registrar el error con el logger 
             logger.log(Level.SEVERE, "Error al eliminar cliente", e);
         }
     }
     
-    // Método para buscar un cliente por su nombre
+    // 4. Método para buscar un cliente por su nombre
     public Cliente consultarCliente(String nombre) {
         // Consulta SQL para buscar un cliente según su nombre
         String sql = "SELECT * FROM cliente WHERE nombre = ?";
@@ -139,7 +139,7 @@ public class ClienteDAO {
             }
 
         } catch (SQLException e) {
-            // Registrar el error con el logger en lugar de usar printStackTrace()
+            // Registrar el error con el logger 
             logger.log(Level.SEVERE, "Error al consultar cliente por nombre", e);
         }
 

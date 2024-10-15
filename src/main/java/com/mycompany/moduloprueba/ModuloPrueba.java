@@ -10,11 +10,11 @@ package com.mycompany.moduloprueba;
  */
 public class ModuloPrueba {
     public static void main(String[] args) {
-        ClienteDAO clienteDAO = new ClienteDAO();    
+        ClienteDAO clienteDAO = new ClienteDAO(); // Se llama clienteDAO que es donde estan los metodos CRUD    
         
         // 1. Insertar un nuevo cliente
         System.out.println("===== INSERTAR CLIENTE =====");
-        Cliente nuevoCliente = new Cliente();  // Usamos el constructor vacío
+        Cliente nuevoCliente = new Cliente();  // Se usa el constructor vacío
         nuevoCliente.setNombre("Carlos Pérez");
         nuevoCliente.setDireccion("Calle 123");
         nuevoCliente.setTelefono("123456789");
@@ -35,18 +35,17 @@ public class ModuloPrueba {
 
         // 3. Actualizar los datos del cliente
         Cliente cliente = new Cliente();
-        cliente.setIdCliente(1); // ID del cliente que quieres actualizar
+        cliente.setIdCliente(1); // ID del cliente que se quiere actualizar
         cliente.setNombre("Eduardo Gómez");
         cliente.setDireccion("Avenida Siempre Viva 742");
         cliente.setTelefono("987654321");
         cliente.setCorreoElectronico("Eduardo.gomez@example.com");
         cliente.setContrasena("nuevaPassword123");
-
         // Llamando al método actualizarCliente para actualizar los datos del cliente
         clienteDAO.actualizarCliente(cliente);
     
         // 4. Eliminar cliente
-        clienteDAO.eliminarCliente(1);
+        clienteDAO.eliminarCliente(1); // el numero en el parentesis es el id del cliente que se quiere eliminar
 
     }
 }

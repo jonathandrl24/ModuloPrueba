@@ -21,6 +21,6 @@ public class DatabaseConnection {
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error al conectar con la base de datos", e);
         }
-        return connection; // Si hay un error, esto será null
+        return connection; // Si hay un error esto será null
     }
 }
