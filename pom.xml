@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>ModuloPrueba</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>23</maven.compiler.release>
+        <exec.mainClass>com.mycompany.moduloprueba.ModuloPrueba</exec.mainClass>
+    </properties>
+    
+    <dependencies>
+        <!-- Dependencia para MySQL Connector (JDBC) -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.26</version> <!-- Cambia a la versión que necesites -->
+        </dependency>
+
+        <!-- Otras dependencias -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin para compilar y ejecutar la aplicación -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version> 
+                <configuration>
+                    <source>23</source> <!-- Cambiado a 23 -->
+                    <target>23</target> <!-- Cambiado a 23 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
